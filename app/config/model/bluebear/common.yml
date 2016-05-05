@@ -1,0 +1,9 @@
+sidus_eav_model:
+    attributes:
+        label:
+            required: true
+        title: ~
+        description:
+            type: html
+            form_options:
+                tinymce_theme: advanced

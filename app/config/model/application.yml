@@ -1,0 +1,39 @@
+parameters:
+    sidus_data_class: BlueBear\EAVModelBundle\Entity\Data
+    sidus_value_class: BlueBear\EAVModelBundle\Entity\Value
+
+sidus_eav_model:
+    data_class: '%sidus_data_class%'
+    value_class: '%sidus_value_class%'
+    collection_type: sidus_bootstrap_collection
+    default_context: {}
+    families:
+        # This is just for the base datagrid
+        Base:
+            instantiable: false
+            attributeAsLabel: foo
+            attributes:
+              - foo
+    attributes:
+        foo: ~
+
+imports:
+    - { resource: @CleverAgeEAVManagerAdminBundle/Resources/config/base_config.yml }
+    - { resource: admin.yml }
+    - { resource: eav_datagrid.yml }
+    - { resource: publishing.yml }
+
+    # Model configuration, order of files matters
+    - { resource: bluebear/common.yml }
+    - { resource: bluebear/climate.yml }
+    - { resource: bluebear/coordinate.yml }
+    - { resource: bluebear/resources.yml }
+    - { resource: bluebear/world.yml }
+#    - { resource: bluebear/ }
+#    - { resource: bluebear/ }
+#    - { resource: bluebear/ }
+
+
+    - { resource: assets.yml }
+    - { resource: user.yml }
+    - { resource: variants.yml }
