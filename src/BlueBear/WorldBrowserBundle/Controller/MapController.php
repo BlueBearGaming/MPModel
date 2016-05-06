@@ -65,8 +65,8 @@ class MapController extends Controller
             return "hsl(100, {$s}%, {$l}%)";
         }
         // Rocks/snow
-        $v1 = max(20 - $height, 0);
-        $v2 = 30 + $height;
+        $v1 = max(20 - $height + 130, 0);
+        $v2 = 30 + $height - 130;
         return "hsl(100, {$v1}%, {$v2}%)";
     }
 }
