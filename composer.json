@@ -14,7 +14,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git@git.clever-age.net:clever-age-practice-manager/eav-manager.git"
+            "url":  "git@gitlab.com:VincentChalnot/eav-manager.git"
         }
     ],
     "require": {
@@ -42,6 +42,8 @@
         "liip/imagine-bundle": "1.5.*",
         "exercise/htmlpurifier-bundle": "~0.2",
         "tinymce/tinymce": "4.3.*",
+
+        "fzaninotto/faker": "~1.6",
 
         "cleverage/eav-manager": "dev-master",
 

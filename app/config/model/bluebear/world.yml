@@ -12,7 +12,7 @@ sidus_eav_model:
               - resourceQuantities
 
     attributes:
-        worldCode:
+        worldCode: # Will also be used as a seed for procedural generation
             required: true
             unique: true
         worldX:
