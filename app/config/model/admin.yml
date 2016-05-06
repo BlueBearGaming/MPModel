@@ -19,6 +19,15 @@ sidus_admin:
                 delete:
                     path:     /{id}/delete
                     defaults: {family: World}
+        map:
+            controller: BlueBearWorldBrowserBundle:Map
+            entity: '%sidus_data_class%'
+            prefix: /map
+            default_form_type: sidus_tabbed_data
+            actions:
+                show:
+                    path:     /{id}/show
+                    defaults: {family: World}
 
         configuration:
             controller: CleverAgeEAVManagerAdminBundle:Data

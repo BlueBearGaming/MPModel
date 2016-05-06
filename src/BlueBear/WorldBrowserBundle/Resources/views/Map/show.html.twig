@@ -1,0 +1,35 @@
+{% extends '@BlueBearLayout/layout.html.twig' %}
+
+{% block tg_center %}
+<style>
+    {% set size = 16 %}
+    .hexagon {
+        /* left/right margin approx. 25% of .hexagon width + spacing */
+        margin: 0 {{ (size * 0.24)|round }}px;
+    }
+    .hexagon, .hexagon::before, .hexagon::after {
+        /*
+         * easy way: height is width * 1.732
+         * actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+         */
+        width: {{ size }}px;
+        height: {{ (size * 1.732)|round }}px;
+    }
+    .hexagon:nth-child(even) {
+        top: {{ (size * 1.732 / 2)|round }}px;
+    }
+</style>
+<div class="honeycomb">
+    {% for line in lines %}
+        <div class="ibws-fix">
+            {% for cell in line %}
+                <div class="hexagon" style="background-color:{{ cell.color }}">{#
+                    <div class="hexagontent">
+                        {{ h }}
+                    </div>
+                #}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
