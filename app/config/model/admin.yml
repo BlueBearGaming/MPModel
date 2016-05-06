@@ -1,10 +1,29 @@
 sidus_admin:
     fallback_template: CleverAgeEAVManagerAdminBundle:Base
     configurations:
-        myadmin:
+        world:
             controller: CleverAgeEAVManagerAdminBundle:Data
             entity: '%sidus_data_class%'
-            prefix: /myadmin
+            prefix: /world
+            default_form_type: sidus_tabbed_data
+            actions:
+                list:
+                    path:     /list
+                    defaults: {family: World}
+                create:
+                    path:     /create
+                    defaults: {family: World}
+                edit:
+                    path:     /{id}/edit
+                    defaults: {family: World}
+                delete:
+                    path:     /{id}/delete
+                    defaults: {family: World}
+
+        configuration:
+            controller: CleverAgeEAVManagerAdminBundle:Data
+            entity: '%sidus_data_class%'
+            prefix: /configuration
             default_form_type: sidus_tabbed_data
             actions:
                 index:
@@ -19,6 +38,5 @@ sidus_admin:
                     path:     /{familyCode}/{id}/delete
             options:
                 families:
-                    - World
                     - Climate
                     - Resource

@@ -63,6 +63,7 @@ class AppKernel extends Kernel
             // Client overrides
             new BlueBear\EAVModelBundle\BlueBearEAVModelBundle(),
             new BlueBear\LayoutBundle\BlueBearLayoutBundle(),
+            new BlueBear\WorldBrowserBundle\BlueBearWorldBrowserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

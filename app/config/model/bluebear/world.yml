@@ -6,8 +6,6 @@ sidus_eav_model:
             attributes:
               - worldCode
               - label
-              - worldX
-              - worldY
               - climate
               - resourceQuantities
 
@@ -15,10 +13,6 @@ sidus_eav_model:
         worldCode: # Will also be used as a seed for procedural generation
             required: true
             unique: true
-        worldX:
-            type: integer
-        worldY:
-            type: integer
 
         # Relations
         world:

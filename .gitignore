@@ -18,4 +18,4 @@
 !app/data/.gitkeep
 
 /.idea
-
+/app/annotations/*

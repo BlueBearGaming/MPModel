@@ -1,0 +1,8 @@
+{# @var result \Sidus\EAV\World #}
+{% set icePercentage = 100/result.getClimate.getTemperatureAverage %}
+{% set water_percentage = result.getClimate.getWaterPercentage %}
+{% set seed = result.getWorldCode %}
+<a href="{{ entity_path(result, 'edit') }}" data-target="tg_right"
+   title="{{ ('admin.' ~ admin.code ~ '.edit.title') | trans }}">
+    <img src="http://worldgen.bin.sh/worldgen.cgi?palette=Atlas&iter=20&cmd=Create&pct_ice={{ icePercentage }}&height=100&seed={{ seed }}&projection=Animated&pct_water={{ water_percentage }}&motif=SciFi">
+</a>

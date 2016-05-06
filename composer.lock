@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "24ec38237bfaba030c663a905ab85984",
+    "hash": "143715ad2b76b47e1cbec41b56199cd6",
     "content-hash": "944b8d28bbbbe412c7368f19b47ffe32",
     "packages": [
         {
@@ -3053,12 +3053,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusAdminBundle.git",
-                "reference": "96b3dcac844bb03f5dc9643e747fcde9ea1a0407"
+                "reference": "9d8003e9d97cc4e7c7fc001436a7cbf164da176f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/96b3dcac844bb03f5dc9643e747fcde9ea1a0407",
-                "reference": "96b3dcac844bb03f5dc9643e747fcde9ea1a0407",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/9d8003e9d97cc4e7c7fc001436a7cbf164da176f",
+                "reference": "9d8003e9d97cc4e7c7fc001436a7cbf164da176f",
                 "shasum": ""
             },
             "require": {
@@ -3089,7 +3089,7 @@
                 "action",
                 "admin"
             ],
-            "time": "2016-04-29 08:53:13"
+            "time": "2016-05-06 13:56:43"
         },
         {
             "name": "sidus/datagrid-bundle",
@@ -3292,12 +3292,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "e50d42db20767d29b7a94900e6100ad374e5f0d2"
+                "reference": "81e42c1c4c0ca9372382e7f3352ef36ccee0a22f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/e50d42db20767d29b7a94900e6100ad374e5f0d2",
-                "reference": "e50d42db20767d29b7a94900e6100ad374e5f0d2",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/81e42c1c4c0ca9372382e7f3352ef36ccee0a22f",
+                "reference": "81e42c1c4c0ca9372382e7f3352ef36ccee0a22f",
                 "shasum": ""
             },
             "require": {
@@ -3334,7 +3334,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2016-05-03 21:18:34"
+            "time": "2016-05-06 11:43:36"
         },
         {
             "name": "sidus/eav-variant-bundle",
