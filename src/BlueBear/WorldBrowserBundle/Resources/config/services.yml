@@ -1,4 +1,7 @@
+parameters:
+    blue_bear_world_browser.generator.world_map.class: BlueBear\WorldBrowserBundle\Generator\WorldMapGenerator
+
 services:
-#    blue_bear_world_browser.example:
-#        class: BlueBear\WorldBrowserBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    blue_bear_world_browser.generator.world_map:
+        class: '%blue_bear_world_browser.generator.world_map.class%'
+

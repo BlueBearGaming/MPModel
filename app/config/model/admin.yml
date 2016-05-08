@@ -25,8 +25,11 @@ sidus_admin:
             prefix: /map
             default_form_type: sidus_tabbed_data
             actions:
-                show:
-                    path:     /{id}/show
+                worldMap:
+                    path:     /{id}
+                    defaults: {family: World}
+                areaMap:
+                    path:     /{id}/{x},{y}
                     defaults: {family: World}
 
         configuration:

@@ -26,6 +26,9 @@ body {
     width: 16px;
     height: 27px;
 }
+.hexagon.hidden {
+    opacity: 0;
+}
 .hexagon::before {
     background-color: inherit;
     content: "";
@@ -45,12 +48,10 @@ body {
     top: 14px;
 }
 .hexagon:hover {
-    background-color: hsla(60, 75%, 75%, 1.0);
     cursor: pointer;
     z-index: 105;
 }
 .hexagon:active {
-    background-color: hsla(60, 75%, 50%, 1.0);
     z-index: 110;
 }
 .hexagontent {

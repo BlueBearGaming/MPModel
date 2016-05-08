@@ -1,0 +1,28 @@
+{% extends '@BlueBearWorldBrowser/Map/worldMap.html.twig' %}
+
+{% set size = 128 %}
+
+{% block tg_center %}
+    <div class="row">
+        <div class="honeycomb col-md-6">
+            <div class="ibws-fix">
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y - 1), hidden: true} %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y)} %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y + 1), hidden: true} %}
+            </div>
+            <div class="ibws-fix">
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x, cell.y - 1)} %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x, cell.y + 1)} %}
+            </div>
+            <div class="ibws-fix">
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y - 1)} %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y)} %}
+                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y + 1)} %}
+            </div>
+        </div>
+        <div class="col-lg-6">
+            {{ dump(cell) }}
+        </div>
+    </div>
+{% endblock %}
