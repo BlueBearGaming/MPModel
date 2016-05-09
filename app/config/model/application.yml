@@ -29,7 +29,7 @@ imports:
     - { resource: bluebear/coordinate.yml }
     - { resource: bluebear/resources.yml }
     - { resource: bluebear/world.yml }
-#    - { resource: bluebear/ }
+    - { resource: bluebear/city.yml }
 #    - { resource: bluebear/ }
 #    - { resource: bluebear/ }
 

@@ -3332,12 +3332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "81e42c1c4c0ca9372382e7f3352ef36ccee0a22f"
+                "reference": "a64c2b6189065a81a5b7cd5480cb34ed82e51e3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/81e42c1c4c0ca9372382e7f3352ef36ccee0a22f",
-                "reference": "81e42c1c4c0ca9372382e7f3352ef36ccee0a22f",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/a64c2b6189065a81a5b7cd5480cb34ed82e51e3c",
+                "reference": "a64c2b6189065a81a5b7cd5480cb34ed82e51e3c",
                 "shasum": ""
             },
             "require": {
@@ -3374,7 +3374,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2016-05-06 11:43:36"
+            "time": "2016-05-09 22:22:25"
         },
         {
             "name": "sidus/eav-variant-bundle",
@@ -4377,16 +4377,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.5",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2"
+                "reference": "8408816780215fae055599d100b5385d9a247151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2",
-                "reference": "39ddd2383f4113cf67f8b28cde2c9d3fa340c3c2",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8408816780215fae055599d100b5385d9a247151",
+                "reference": "8408816780215fae055599d100b5385d9a247151",
                 "shasum": ""
             },
             "require": {
@@ -4507,7 +4507,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-29 15:34:08"
+            "time": "2016-05-09 21:45:54"
         },
         {
             "name": "tinymce/tinymce",
@@ -4979,7 +4979,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.5",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",

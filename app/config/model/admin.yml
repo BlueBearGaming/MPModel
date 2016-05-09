@@ -31,6 +31,9 @@ sidus_admin:
                 areaMap:
                     path:     /{id}/{x},{y}
                     defaults: {family: World}
+                build:
+                    path:     /{id}/{x},{y}/build
+                    defaults: {family: World}
 
         configuration:
             controller: CleverAgeEAVManagerAdminBundle:Data

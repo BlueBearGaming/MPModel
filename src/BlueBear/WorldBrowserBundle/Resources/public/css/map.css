@@ -26,7 +26,7 @@ body {
     width: 16px;
     height: 27px;
 }
-.hexagon.hidden {
+.hexagon.hexagon-hidden {
     opacity: 0;
 }
 .hexagon::before {
@@ -47,6 +47,10 @@ body {
     /* top approx. 50% of .hexagon height + spacing */
     top: 14px;
 }
+.honeycomb-even .hexagon:nth-child(even) {
+    /* top approx. 50% of .hexagon height + spacing */
+    top: -14px;
+}
 .hexagon:hover {
     cursor: pointer;
     z-index: 105;
@@ -54,7 +58,7 @@ body {
 .hexagon:active {
     z-index: 110;
 }
-.hexagontent {
+.hexacontent {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,12 +67,28 @@ body {
     font-size: 1.4rem;
     line-height: 1.2;
     z-index: 100;
+    color: #0a0a0a;
 }
 .ibws-fix {
     font-size: 0;
     white-space: nowrap;
 }
+.ibws-fix-odd {
+    margin-top: -14px;
+}
 .honeycomb {
     margin: 0 auto;
     text-align: center;
+    overflow: auto;
+}
+.honeycomb-even {
+    padding-top: 14px;
+}
+
+.hexagon.fog {
+    opacity: 0.5;
+}
+
+.black {
+    background-color: black;
 }

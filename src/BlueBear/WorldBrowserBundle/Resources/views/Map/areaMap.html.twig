@@ -1,28 +1,34 @@
 {% extends '@BlueBearWorldBrowser/Map/worldMap.html.twig' %}
 
-{% set size = 128 %}
+{% set size = 64 %}
 
 {% block tg_center %}
     <div class="row">
-        <div class="honeycomb col-md-6">
-            <div class="ibws-fix">
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y - 1), hidden: true} %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y)} %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x - 1, cell.y + 1), hidden: true} %}
-            </div>
-            <div class="ibws-fix">
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x, cell.y - 1)} %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x, cell.y + 1)} %}
-            </div>
-            <div class="ibws-fix">
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y - 1)} %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y)} %}
-                {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {cell: map.cell(cell.x + 1, cell.y + 1)} %}
-            </div>
+        <div class="honeycomb col-md-6 black">
+            {% for row in 0..4 %}
+                <div class="ibws-fix">
+                    {% for col in 0..4 %}
+                        {% set offset = col is even ? 0 : 1 %}
+                        {% set x = cell.x - 2 + col %}
+                        {% set y = cell.y - 1 + row - (col - offset) / 2 %}
+                        {% set c = map.cell(x, y) %}
+                        {% include '@BlueBearWorldBrowser/Map/cell.html.twig' with {
+                            cell: c,
+                            class: c ? (cell.distance(c) > 1 ? 'fog'),
+                            hidden: c ? (cell.distance(c) > 2)
+                        } %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
         </div>
         <div class="col-lg-6">
+            <a href="{{ admin_path('map', 'worldMap', {id: map.world.id}) }}" class="btn btn-default">
+                Back
+            </a>
             {{ dump(cell) }}
+            <a href="{{ admin_path('map', 'build', {id: map.world.id, x: cell.x, y: cell.y}) }}" class="btn btn-primary">
+                Create City
+            </a>
         </div>
     </div>
 {% endblock %}

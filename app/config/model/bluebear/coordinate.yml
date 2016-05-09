@@ -1,6 +1,7 @@
 sidus_eav_model:
     families:
-        Coordinate:
+        Coordinated:
+            instantiable: false
             attributeAsLabel: x
             attributes:
               - x

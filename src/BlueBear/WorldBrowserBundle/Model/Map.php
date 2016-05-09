@@ -33,17 +33,17 @@ class Map
         $generator->setMapSeed($world->getWorldCode());
         $this->heightMap = $generator->generate();
 
-        $cells = [];
         foreach ($this->heightMap as $x => $heights) {
             foreach ($heights as $y => $rawHeight) {
                 $height = round($rawHeight / 2 * 255 - 255);
-                $cell = new Cell($x, $y);
+                $offset = $x % 2 ? 1 : 0;
+                $axialY = (int) floor($y + ($x + $offset) / 2 - $x);
+                $cell = new Cell($this, $x, $axialY);
                 $cell->setHeight($height);
 
-                $cells[$x][$y] = $cell;
+                $this->cells[$cell->getX()][$cell->getY()] = $cell;
             }
         }
-        $this->cells = $cells;
     }
 
     /**
@@ -61,7 +61,9 @@ class Map
      */
     public function getCell($x, $y)
     {
-        // @todo check existence of coordinates
+        if (!isset($this->cells[$x][$y])) {
+            return null;
+        }
         return $this->cells[$x][$y];
     }
 

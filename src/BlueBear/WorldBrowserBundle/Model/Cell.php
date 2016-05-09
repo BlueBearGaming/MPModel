@@ -2,9 +2,13 @@
 
 namespace BlueBear\WorldBrowserBundle\Model;
 
+use Sidus\EAVModelBundle\Entity\DataInterface;
 
 class Cell
 {
+    /** @var Map */
+    protected $map;
+
     /** @var int */
     protected $x;
 
@@ -14,13 +18,18 @@ class Cell
     /** @var integer */
     protected $height;
 
+    /** @var DataInterface[] */
+    protected $contents;
+
     /**
      * Cell constructor.
+     * @param Map $map
      * @param int $x
      * @param int $y
      */
-    public function __construct($x, $y)
+    public function __construct(Map $map, $x, $y)
     {
+        $this->map = $map;
         $this->x = $x;
         $this->y = $y;
     }
@@ -58,6 +67,30 @@ class Cell
     }
 
     /**
+     * @return array
+     */
+    public function getContents()
+    {
+        return $this->contents;
+    }
+
+    /**
+     * @param DataInterface $content
+     */
+    public function addContent(DataInterface $content)
+    {
+        $this->contents[] = $content;
+    }
+
+    /**
+     * @param array $contents
+     */
+    public function setContents($contents)
+    {
+        $this->contents = $contents;
+    }
+
+    /**
      * @return string
      */
     public function getColor()
@@ -65,24 +98,53 @@ class Cell
         $height = $this->height;
         if ($height < 0) { // Ocean / lake
             $l = 50 + $height / 2;
-            return "hsl(240, 62%, {$l}%)";
-        }
-        if ($height < 10) { // Swamp / beach
+            $color = [
+                'H' => 240,
+                'S' => 62,
+                'L' => $l,
+            ];
+        } elseif ($height < 10) { // Swamp / beach
             $l = 70 + $height * 2;
-            return "hsl(30, 100%, {$l}%)";
-        }
-        if ($height < 90) { // Forest
+            $color = [
+                'H' => 30,
+                'S' => 100,
+                'L' => $l,
+            ];
+        } elseif ($height < 90) { // Forest
             $l = 30 - $height / 4;
-            return "hsl(100, 100%, {$l}%)";
-        }
-        if ($height < 130) { // Mountains / grass
+            $color = [
+                'H' => 100,
+                'S' => 100,
+                'L' => $l,
+            ];
+        } elseif ($height < 130) { // Mountains / grass
             $s = 90 - $height * 1.5 + 90;
             $l = 10 + $height - 90;
-            return "hsl(100, {$s}%, {$l}%)";
+            $color = [
+                'H' => 100,
+                'S' => $s,
+                'L' => $l,
+            ];
+        } else { // Rocks/snow
+            $s = max(20 - $height + 130, 0);
+            $l = 30 + $height - 130;
+            $color = [
+                'H' => 100,
+                'S' => $s,
+                'L' => $l,
+            ];
         }
-        // Rocks/snow
-        $v1 = max(20 - $height + 130, 0);
-        $v2 = 30 + $height - 130;
-        return "hsl(100, {$v1}%, {$v2}%)";
+        return "hsl({$color['H']}, {$color['S']}%, {$color['L']}%)";
+    }
+
+    /**
+     * @param Cell $cell
+     * @return int
+     */
+    public function distance(Cell $cell)
+    {
+        return (abs($this->getY() - $cell->getY())
+            + abs($this->getY() + $this->getX() - $cell->getY() - $cell->getX())
+            + abs($this->getX() - $cell->getX())) / 2;
     }
 }
