@@ -5,6 +5,7 @@ namespace BlueBear\WorldBrowserBundle\Controller;
 use BlueBear\WorldBrowserBundle\Model\Map;
 use CleverAge\EAVManager\Component\Controller\AdminControllerTrait;
 use CleverAge\EAVManager\Component\Controller\BaseControllerTrait;
+use Doctrine\ORM\Query\Expr\Join;
 use Faker\Factory;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sidus\AdminBundle\Controller\AdminInjectable;
@@ -12,6 +13,7 @@ use Sidus\EAV\City;
 use Sidus\EAV\Coordinated;
 use Sidus\EAV\World;
 use Sidus\EAVModelBundle\Entity\DataInterface;
+use Sidus\EAVModelBundle\Model\Family;
 use Sidus\EAVModelBundle\Model\FamilyInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -86,12 +88,21 @@ class MapController extends Controller implements AdminInjectable
     protected function loadMap(DataInterface $world)
     {
         $map = $this->get('blue_bear_world_browser.generator.world_map')->generate($world);
+        /** @var Family $coordinatedFamily */
+        $coordinatedFamily = $this->get('sidus_eav_model.family.coordinated');
         $qb = $this->get('sidus_eav_model.doctrine.repository.data')->createQueryBuilder('e');
-        $qb->where('e.family = :family')
+        $qb
+            ->addSelect('values')
+            ->where('e.family IN (:family)')
+            ->join('e.values', 'v', Join::WITH, "v.attributeCode = 'world' AND v.dataValue = :world")
+            ->leftJoin('e.values', 'values')
             ->setParameters([
-                'family' => 'City',
+                'family' => $coordinatedFamily->getMatchingCodes(),
+                'world' => $world,
             ]);
+
         $elements = $qb->getQuery()->getResult();
+
         /** @var Coordinated $element */
         foreach ($elements as $element) {
             $cell = $map->getCell($element->getX(), $element->getY());
