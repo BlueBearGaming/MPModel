@@ -152,12 +152,12 @@
             "source": {
                 "type": "git",
                 "url": "git@gitlab.com:VincentChalnot/eav-manager.git",
-                "reference": "60a8a6ca6a8e4ff30904b636d0169a4256d90979"
+                "reference": "2a889306b70129a147edb06ef199d89b4efd9233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://gitlab.com/api/v3/projects/VincentChalnot%2Feav-manager/repository/archive.zip?sha=60a8a6ca6a8e4ff30904b636d0169a4256d90979",
-                "reference": "60a8a6ca6a8e4ff30904b636d0169a4256d90979",
+                "url": "https://gitlab.com/api/v3/projects/VincentChalnot%2Feav-manager/repository/archive.zip?sha=2a889306b70129a147edb06ef199d89b4efd9233",
+                "reference": "2a889306b70129a147edb06ef199d89b4efd9233",
                 "shasum": ""
             },
             "type": "library",
@@ -185,7 +185,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2016-05-05 22:34:33"
+            "time": "2016-05-09 17:12:04"
         },
         {
             "name": "components/jquery",
@@ -4511,16 +4511,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.3.11",
+            "version": "4.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "969503f87d04a41ad0b84b1d215a98fba13ca5a9"
+                "reference": "dfa88d1f6868aa80081f35f3bb0b8257181b6fdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/969503f87d04a41ad0b84b1d215a98fba13ca5a9",
-                "reference": "969503f87d04a41ad0b84b1d215a98fba13ca5a9",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/dfa88d1f6868aa80081f35f3bb0b8257181b6fdf",
+                "reference": "dfa88d1f6868aa80081f35f3bb0b8257181b6fdf",
                 "shasum": ""
             },
             "type": "component",
@@ -4553,7 +4553,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2016-04-25 02:19:14"
+            "time": "2016-05-10 11:15:05"
         },
         {
             "name": "twbs/bootstrap-sass",

@@ -1,0 +1,11 @@
+sidus_eav_model:
+    families:
+        Player:
+            attributeAsLabel: label
+            attributes:
+              - label
+              - worlds
+              - technologies
+              - resources
+
+    attributes:

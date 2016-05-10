@@ -1,0 +1,20 @@
+sidus_eav_model:
+    families:
+        Capacity:
+            attributeAsLabel: capacityCode
+            attributeAsIdentifier: capacityCode
+            attributes:
+              - capacityCode
+
+
+    attributes:
+        capacityCode:
+            unique: true
+            required: true
+
+        # relations
+        requiredTechnologies:
+            type: autocomplete_data
+            multiple: true
+            form_options:
+                family: Technology

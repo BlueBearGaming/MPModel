@@ -1,0 +1,30 @@
+sidus_eav_model:
+    families:
+        Technology:
+            attributeAsLabel: technologyCode
+            attributeAsIdentifier: technologyCode
+            attributes:
+              - technologyCode
+              - requiredTechnologies
+              - scienceCost
+              - unlockedCapacities
+
+    attributes:
+        technologyCode:
+            unique: true
+            required: true
+        scienceCost:
+            type: integer
+            required: true
+        unlockedCapacities:
+            type: autocomplete_data
+            multiple: true
+            form_options:
+                family: Capacity
+
+        # relations
+        requiredTechnologies:
+            type: autocomplete_data
+            multiple: true
+            form_options:
+                family: Technology
