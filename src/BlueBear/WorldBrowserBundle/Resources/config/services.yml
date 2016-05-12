@@ -1,7 +1,16 @@
 parameters:
-    blue_bear_world_browser.generator.world_map.class: BlueBear\WorldBrowserBundle\Generator\WorldMapGenerator
+    bluebear.loader.world_map.class: BlueBear\WorldBrowserBundle\Loader\WorldMapLoader
+    bluebear.generator.world.class: BlueBear\EAVModelBundle\Generator\WorldGenerator
 
 services:
-    blue_bear_world_browser.generator.world_map:
-        class: '%blue_bear_world_browser.generator.world_map.class%'
+    bluebear.loader.world_map:
+        class: '%bluebear.loader.world_map.class%'
+        arguments:
+            - '@sidus_eav_model.doctrine.repository.data'
+            - '@sidus_eav_model.family.coordinated'
 
+    bluebear.generator.world:
+        class: '%bluebear.generator.world.class%'
+        arguments:
+            - '@sidus_eav_model.family_configuration.handler'
+            - '@sidus_eav_model.doctrine.repository.data'

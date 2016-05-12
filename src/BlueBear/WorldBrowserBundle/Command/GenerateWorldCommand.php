@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueBear\EAVModelBundle\Command;
+namespace BlueBear\WorldBrowserBundle\Command;
 
 use Faker\Factory;
 use Sidus\EAVModelBundle\Entity\DataInterface;

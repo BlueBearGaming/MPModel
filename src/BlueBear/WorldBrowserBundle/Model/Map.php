@@ -33,8 +33,12 @@ class Map
         $generator->setMapSeed($world->getWorldCode());
         $this->heightMap = $generator->generate();
 
+        $maxY = count($this->heightMap) / 2;
         foreach ($this->heightMap as $x => $heights) {
             foreach ($heights as $y => $rawHeight) {
+                if ($y > $maxY) {
+                    break;
+                }
                 $height = round($rawHeight / 2 * 255 - 255);
                 $offset = $x % 2 ? 1 : 0;
                 $axialY = (int) floor($y + ($x + $offset) / 2 - $x);

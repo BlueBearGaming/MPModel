@@ -3280,12 +3280,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVFilterBundle.git",
-                "reference": "580c266ba7d2ae0df55a4a4172582d7b5ca56407"
+                "reference": "3730340fb7dbeaab5c9531dc88809e1e9f1f492f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/580c266ba7d2ae0df55a4a4172582d7b5ca56407",
-                "reference": "580c266ba7d2ae0df55a4a4172582d7b5ca56407",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/3730340fb7dbeaab5c9531dc88809e1e9f1f492f",
+                "reference": "3730340fb7dbeaab5c9531dc88809e1e9f1f492f",
                 "shasum": ""
             },
             "require": {
@@ -3323,7 +3323,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2016-04-28 12:10:10"
+            "time": "2016-05-12 15:45:59"
         },
         {
             "name": "sidus/eav-model-bundle",

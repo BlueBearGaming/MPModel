@@ -9,8 +9,20 @@ use Doctrine\ORM\Mapping as ORM;
  * Data
  *
  * @ORM\Table(name="bluebear_data")
- * @ORM\Entity(repositoryClass="CleverAge\EAVManager\EAVModelBundle\Entity\DataRepository")
+ * @ORM\Entity(repositoryClass="BlueBear\EAVModelBundle\Entity\DataRepository")
  */
 class Data extends BaseData
 {
+    /**
+     * @return string
+     */
+    public function getIcon()
+    {
+        $code = strtolower($this->getFamilyCode());
+        switch ($code) {
+            case 'city':
+                return 'bank';
+        }
+        return $code;
+    }
 }

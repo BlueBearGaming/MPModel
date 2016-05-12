@@ -1,9 +1,1 @@
 parameters:
-    bluebear.generator.world.class: BlueBear\EAVModelBundle\Generator\WorldGenerator
-
-services:
-    bluebear.generator.world:
-        class: '%bluebear.generator.world.class%'
-        arguments:
-            - '@sidus_eav_model.family_configuration.handler'
-            - '@sidus_eav_model.doctrine.repository.data'
