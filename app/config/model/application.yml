@@ -33,7 +33,5 @@ imports:
 #    - { resource: bluebear/ }
 #    - { resource: bluebear/ }
 
-
-    - { resource: assets.yml }
     - { resource: user.yml }
     - { resource: variants.yml }

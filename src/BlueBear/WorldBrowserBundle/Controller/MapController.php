@@ -3,21 +3,18 @@
 namespace BlueBear\WorldBrowserBundle\Controller;
 
 use BlueBear\WorldBrowserBundle\Model\Map;
-use CleverAge\EAVManager\Component\Controller\AdminControllerTrait;
+use CleverAge\EAVManager\AdminBundle\Controller\AbstractAdminController;
 use CleverAge\EAVManager\Component\Controller\BaseControllerTrait;
 use Faker\Factory;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-use Sidus\AdminBundle\Controller\AdminInjectable;
 use Sidus\EAV\City;
 use Sidus\EAV\World;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Model\FamilyInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class MapController extends Controller implements AdminInjectable
+class MapController extends AbstractAdminController
 {
     use BaseControllerTrait;
-    use AdminControllerTrait;
 
     /**
      * @Template()
@@ -56,6 +53,7 @@ class MapController extends Controller implements AdminInjectable
      * @param int                 $x
      * @param int                 $y
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @throws \Exception
      */
     public function buildAction(DataInterface $world, $x, $y)
     {

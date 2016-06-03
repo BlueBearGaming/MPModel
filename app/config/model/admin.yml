@@ -19,6 +19,7 @@ sidus_admin:
                 delete:
                     path:     /{id}/delete
                     defaults: {family: World}
+
         map:
             controller: BlueBearWorldBrowserBundle:Map
             entity: '%sidus_data_class%'
@@ -52,6 +53,8 @@ sidus_admin:
                 delete:
                     path:     /{familyCode}/{id}/delete
             options:
+                datagrid: data
                 families:
-                    - Climate
-                    - Resource
+                    Climate: ~
+                    Resource: ~
+                    City: ~
