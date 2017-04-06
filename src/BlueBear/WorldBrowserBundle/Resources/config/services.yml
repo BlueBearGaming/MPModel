@@ -1,6 +1,6 @@
 parameters:
     bluebear.loader.world_map.class: BlueBear\WorldBrowserBundle\Loader\WorldMapLoader
-    bluebear.generator.world.class: BlueBear\EAVModelBundle\Generator\WorldGenerator
+    bluebear.generator.world.class: BlueBear\WorldBrowserBundle\Generator\WorldGenerator
 
 services:
     bluebear.loader.world_map:

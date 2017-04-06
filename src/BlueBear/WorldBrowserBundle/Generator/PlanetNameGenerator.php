@@ -1,6 +1,6 @@
 <?php
 
-namespace BlueBear\EAVModelBundle\Generator;
+namespace BlueBear\WorldBrowserBundle\Generator;
 
 
 class PlanetNameGenerator
