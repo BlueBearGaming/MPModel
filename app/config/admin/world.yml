@@ -1,0 +1,19 @@
+sidus_admin:
+    configurations:
+        world:
+            controller: CleverAgeEAVManagerAdminBundle:Data
+            entity: '%sidus_data_class%'
+            prefix: /world
+            actions:
+                list:
+                    path:     /list
+                    defaults: {family: World}
+                create:
+                    path:     /create
+                    defaults: {family: World}
+                edit:
+                    path:     /{id}/edit
+                    defaults: {family: World}
+                delete:
+                    path:     /{id}/delete
+                    defaults: {family: World}

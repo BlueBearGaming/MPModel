@@ -1,0 +1,18 @@
+parameters:
+    sidus_data_class: BlueBear\EAVModelBundle\Entity\Data
+    sidus_value_class: BlueBear\EAVModelBundle\Entity\Value
+
+sidus_eav_model:
+    data_class: '%sidus_data_class%'
+    value_class: '%sidus_value_class%'
+    serializer_enabled: true
+    default_context:
+        draft: false
+    global_context_mask:
+        - draft
+
+clever_age_eav_manager_user:
+    mailer:
+        company: BlueBear MP
+        from_email: no-reply@bluebear.fr
+        from_name: BlueBear

@@ -1,0 +1,5 @@
+parameters:
+    locale: fr
+    router.request_context.host: '%site.www_prefix%.%site.root_domain%'
+    router.assets_host: '%router.request_context.scheme%://%site.assets_prefix%.%site.root_domain%'
+    router.static_host: '%router.request_context.scheme%://%site.static_prefix%.%site.root_domain%'

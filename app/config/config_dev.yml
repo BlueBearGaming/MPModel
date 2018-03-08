@@ -1,10 +1,10 @@
 imports:
     - { resource: config.yml }
-    - { resource: '@SidusEAVModelBundle/Resources/config/annotation_generator.yml' }
+    - { resource: '@SidusEAVModelBundle/Resources/config/services/annotation_generator.yml' }
 
 framework:
     router:
-        resource: "%kernel.root_dir%/config/routing_dev.yml"
+        resource: '%kernel.root_dir%/config/routing_dev.yml'
         strict_requirements: true
     profiler: { only_exceptions: false }
 
@@ -12,40 +12,19 @@ web_profiler:
     toolbar: true
     intercept_redirects: false
 
-assetic:
-    use_controller: true
-
 monolog:
     handlers:
         main:
-            type: stream
-            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            type: fingers_crossed
+            action_level: warning
+            handler: file
+            channels: ['!translation', '!event']
+        file:
+            type: rotating_file
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            max_files: 10
             level: debug
-            channels: [!event]
+            formatter: monolog.formatter.standard
         console:
-            type:   console
-            bubble: false
-            channels: [!event, !doctrine]
-        # uncomment to get logging in your browser
-        # you may have to allow bigger header sizes in your Web server configuration
-        #firephp:
-        #    type:   firephp
-        #    level:  info
-        #chromephp:
-        #    type:   chromephp
-        #    level:  info
-
-#swiftmailer:
-#    delivery_address: me@example.com
-
-doctrine:
-    dbal:
-        connections:
-            fixtures:
-                driver:   pdo_mysql
-                host:     "%database_host%"
-                port:     "%database_port%"
-                dbname:   "%database_name%_old"
-                user:     "%database_user%"
-                password: "%database_password%"
-                charset:  UTF8
+            type: console
+            channels: ['!event', '!doctrine', '!cache', '!translation']

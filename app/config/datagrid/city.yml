@@ -1,0 +1,17 @@
+sidus_data_grid:
+    configurations:
+        city:
+            family: City
+            parent: data
+            filter_config:
+                sortable:
+                    - id
+                    - label
+                fields:
+                    label: ~
+            columns:
+                label:
+                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                world: ~
+                actions:
+                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"

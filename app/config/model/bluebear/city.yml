@@ -1,7 +1,0 @@
-sidus_eav_model:
-    families:
-        City:
-            parent: Coordinated
-            attributeAsLabel: label
-            attributes:
-              - label

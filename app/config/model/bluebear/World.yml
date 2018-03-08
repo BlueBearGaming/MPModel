@@ -1,0 +1,20 @@
+sidus_eav_model:
+    families:
+        World:
+            attributeAsLabel: label
+            attributeAsIdentifier: worldCode
+            attributes:
+                worldCode: # Will also be used as a seed for procedural generation
+                    required: true
+                    unique: true
+                label:
+                    required: true
+                climate:
+                    type: autocomplete_data
+                    form_options:
+                        family: Climate
+                resourceQuantities:
+                    type: embed
+                    multiple: true
+                    form_options:
+                        family: ResourceQuantity

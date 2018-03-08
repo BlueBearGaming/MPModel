@@ -1,0 +1,31 @@
+sidus_eav_model:
+    families:
+        Climate:
+            attributeAsLabel: climateCode
+            attributeAsIdentifier: climateCode
+            attributes:
+                climateCode:
+                    required: true
+                    unique: true
+                description:
+                    type: html
+                    form_options:
+                        tinymce_theme: advanced
+                # Juste des idées pour aider à la génération auto et à des calculs de récoltes ou autre
+                # In C°
+                temperatureAverage:
+                    type: decimal
+                temperatureMin:
+                    type: decimal
+                temperatureMax:
+                    type: decimal
+                # In mm of rain per year : @todo change me ?
+                humidityAverage:
+                    type: decimal
+                humidityMin:
+                    type: decimal
+                humidityMax:
+                    type: decimal
+                # As a global percentage land/water
+                waterPercentage:
+                    type: decimal

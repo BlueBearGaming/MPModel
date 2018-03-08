@@ -1,0 +1,17 @@
+sidus_admin:
+    fallback_template: CleverAgeEAVManagerAdminBundle:Base
+    configurations:
+        map:
+            controller: BlueBearWorldBrowserBundle:Map
+            entity: '%sidus_data_class%'
+            prefix: /map
+            actions:
+                worldMap:
+                    path:     /{id}
+                    defaults: {family: World}
+                areaMap:
+                    path:     /{id}/{x},{y}
+                    defaults: {family: World}
+                build:
+                    path:     /{id}/{x},{y}/build
+                    defaults: {family: World}

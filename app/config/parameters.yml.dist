@@ -7,8 +7,6 @@ parameters:
     database_name:     bluebear_mp
     database_user:     bluebear
     database_password: ~
-    # You should uncomment this if you want use pdo_sqlite
-    # database_path: "%kernel.root_dir%/data.db3"
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -18,12 +16,11 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    fos_elastica.host: localhost
-    fos_elastica.port: 9200
-    elastica_enabled: false
-    publishing_enabled: false
+    # Needed when app is behind a reverse proxy
+    trusted_proxies: ~
 
-    # Can be /usr/bin/nodejs
-    node_path: /usr/bin/node
-    node_uglifyjs_path: /usr/bin/uglifyjs
-    node_uglifycss_path: /usr/bin/uglifycss
+    router.request_context.scheme: http
+    site.root_domain: bluebear.code
+    site.www_prefix: www
+    site.assets_prefix: assets
+    site.static_prefix: static

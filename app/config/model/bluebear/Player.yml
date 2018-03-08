@@ -1,0 +1,25 @@
+sidus_eav_model:
+    families:
+        Player:
+            attributeAsLabel: label
+            attributes:
+                label:
+                    required: true
+
+                worlds:
+                    type: autocomplete_data
+                    multiple: true
+                    form_options:
+                        family: World
+
+                technologies:
+                    type: autocomplete_data
+                    multiple: true
+                    form_options:
+                        family: Technology
+
+                resourceQuantities:
+                    type: embed
+                    multiple: true
+                    form_options:
+                        family: ResourceQuantity

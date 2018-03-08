@@ -1,0 +1,31 @@
+sidus_data_grid:
+    configurations:
+        data:
+            family: World
+            filter_config:
+                sortable:
+                    - id
+                    - createdAt
+                    - updatedAt
+                fields: []
+            columns:
+                id:
+                    label: "#"
+                label:
+                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                createdAt: ~
+                updatedAt: ~
+                actions:
+                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"
+            actions:
+                create:
+                    form_type: admin_link
+                    label: admin.action.create.label
+                    action: create
+                    icon: plus
+                    attr:
+                        class: btn-primary
+                        data-target: tg_right
+            reset_button:
+                attr:
+                    data-target: tg_center
