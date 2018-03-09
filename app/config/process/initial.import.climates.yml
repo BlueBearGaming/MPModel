@@ -1,0 +1,29 @@
+clever_age_process:
+    configurations:
+        initial.import.climates:
+            entry_point: read
+            tasks:
+                read:
+                    service: '@cleverage_process.task.yaml_reader'
+                    options:
+                        file_path: '%kernel.root_dir%/data/fixtures/02-climates.yml'
+                    outputs: [denormalize]
+
+                denormalize:
+                    service: '@cleverage_process.task.denormalizer'
+                    options:
+                        class: '%sidus_eav_model.entity.data.class%'
+                        context:
+                            family: Climate
+                    outputs: [validate]
+
+                validate:
+                    service: '@cleverage_process.task.validator'
+                    outputs: [write]
+                    errors: [detach]
+
+                detach:
+                    service: '@cleverage_process.task.doctrine_detacher'
+
+                write:
+                    service: '@cleverage_process.task.doctrine_writer'

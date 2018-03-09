@@ -69,7 +69,7 @@ class MapController extends AbstractAdminController
 
         $this->saveEntity($city);
 
-        return $this->redirectToAdmin('map', 'areaMap', [
+        return $this->redirectToAction( 'areaMap', [
             'id' => $world->getId(),
             'x' => $x,
             'y' => $y,

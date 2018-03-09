@@ -5,11 +5,10 @@ sidus_eav_model:
             attributeAsIdentifier: capacityCode
             attributes:
                 capacityCode:
-                    unique: true
-                    required: true
+                    type: string_identifier
 
                 requiredTechnologies:
-                    type: autocomplete_data
+                    type: autocomplete_data_selector
                     multiple: true
                     form_options:
                         family: Technology

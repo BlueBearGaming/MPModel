@@ -22,3 +22,9 @@ stop: ## Stop and destroy docker images
 .PHONY: shell
 shell: ## Deploy to staging
 	cd docker && docker-compose exec www zsh
+
+.PHONY: reset
+reset:
+#	cd docker && docker-compose exec www bin/console doctrine:schema:create
+	cd docker && docker-compose exec www bin/console cleverage:process:execute initial.import.resources initial.import.climates
+	cd docker && docker-compose exec www bin/console bluebear:generate:world

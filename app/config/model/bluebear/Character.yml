@@ -3,6 +3,8 @@ sidus_eav_model:
         Character:
             attributeAsLabel: fullName
             attributes:
+                fullName:
+                    required: true
 #                - coordinate
 #                - fullName
 #                - dateOfBirth

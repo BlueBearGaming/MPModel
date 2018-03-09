@@ -1,25 +1,26 @@
 sidus_data_grid:
     configurations:
-        # Configuration Example
         world:
-            family: World
             parent: data
-            filter_config:
+            query_handler:
+                provider: sidus.eav
+                options:
+                    family: World
                 sortable:
-                    - id
+                    - worldCode
                     - label
-                fields:
+                filters:
                     label: ~
                     climate:
                         type: autocomplete_data
             columns:
                 worldCode:
-                    label: "code/seed"
+                    label: 'code/seed'
                 label:
-                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                    template: '%clickable.template%'
                 preview:
-                    template: "BlueBearWorldBrowserBundle:World:world.preview.html.twig"
+                    template: 'BlueBearWorldBrowserBundle:World:world.preview.html.twig'
                 climate: ~
                 resourceQuantities: ~
                 actions:
-                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"
+                    template: '%eav_datagrid.actions%'

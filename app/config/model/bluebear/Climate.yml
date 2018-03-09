@@ -5,8 +5,7 @@ sidus_eav_model:
             attributeAsIdentifier: climateCode
             attributes:
                 climateCode:
-                    required: true
-                    unique: true
+                    type: string_identifier
                 description:
                     type: html
                     form_options:

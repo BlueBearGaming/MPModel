@@ -5,16 +5,15 @@ sidus_eav_model:
             attributeAsIdentifier: worldCode
             attributes:
                 worldCode: # Will also be used as a seed for procedural generation
-                    required: true
-                    unique: true
+                    type: string_identifier
                 label:
                     required: true
                 climate:
-                    type: autocomplete_data
+                    type: autocomplete_data_selector
                     form_options:
                         family: Climate
                 resourceQuantities:
                     type: embed
                     multiple: true
                     form_options:
-                        family: ResourceQuantity
+                        family: GameResourceQuantity

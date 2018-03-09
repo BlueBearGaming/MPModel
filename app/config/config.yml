@@ -11,12 +11,7 @@ imports:
     - { resource: application/* }
 
     # EAV Manager specific configuration
-
-    # Admins
     - { resource: admin/* }
-
-    # Datagrids
     - { resource: datagrid/* }
-
-    # Model
     - { resource: model/* }
+    - { resource: process/* }

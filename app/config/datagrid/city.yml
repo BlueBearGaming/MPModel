@@ -1,17 +1,19 @@
 sidus_data_grid:
     configurations:
         city:
-            family: City
             parent: data
-            filter_config:
+            query_handler:
+                provider: sidus.eav
+                options:
+                    family: City
                 sortable:
                     - id
                     - label
-                fields:
+                filters:
                     label: ~
             columns:
                 label:
-                    template: "CleverAgeEAVManagerAdminBundle:Base:clickable.column.html.twig"
+                    template: '%clickable.template%'
                 world: ~
                 actions:
-                    template: "CleverAgeEAVManagerAdminBundle:Data:list.row.actions.html.twig"
+                    template: '%eav_datagrid.actions%'

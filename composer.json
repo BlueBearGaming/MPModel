@@ -43,9 +43,7 @@
         "sidus/datagrid-bundle": "dev-v1.3-dev",
         "sidus/file-upload-bundle": "dev-v1.2.x-dev",
         "sidus/admin-bundle": "dev-v1.3-dev",
-        "cleverage/process-bundle": "dev-master",
-
-        "sidus/elastica-filter-bundle": "dev-master"
+        "cleverage/process-bundle": "dev-v1.1-dev"
     },
     "require-dev": {
         "nelmio/alice": "^3.0@beta",

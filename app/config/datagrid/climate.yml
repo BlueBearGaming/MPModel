@@ -1,10 +1,10 @@
 sidus_data_grid:
     configurations:
-        data:
+        climate:
             query_handler:
                 provider: sidus.eav
                 options:
-                    family: World
+                    family: Climate
                 sortable:
                     - id
                     - createdAt

@@ -4,10 +4,11 @@ namespace BlueBear\WorldBrowserBundle\Loader;
 
 use BlueBear\EAVModelBundle\Entity\DataRepository;
 use BlueBear\WorldBrowserBundle\Model\Map;
-use Sidus\EAV\Coordinated;
-use Sidus\EAV\World;
+use Doctrine\Bundle\DoctrineBundle\Registry;
 use Sidus\EAVModelBundle\Entity\DataInterface;
 use Sidus\EAVModelBundle\Model\FamilyInterface;
+use Sidus\EAVModelBundle\Registry\FamilyRegistry;
+use Sidus\EAV;
 
 class WorldMapLoader
 {
@@ -18,18 +19,17 @@ class WorldMapLoader
     protected $coordinatedFamily;
 
     /**
-     * WorldMapGenerator constructor.
-     * @param DataRepository  $dataRepository
-     * @param FamilyInterface $coordinatedFamily
+     * @param Registry       $doctrine
+     * @param FamilyRegistry $familyRegistry
      */
-    public function __construct(DataRepository $dataRepository, FamilyInterface $coordinatedFamily)
+    public function __construct(Registry $doctrine, FamilyRegistry $familyRegistry)
     {
-        $this->dataRepository = $dataRepository;
-        $this->coordinatedFamily = $coordinatedFamily;
+        $this->coordinatedFamily = $familyRegistry->getFamily('Coordinated');
+        $this->dataRepository = $doctrine->getRepository($this->coordinatedFamily->getDataClass());
     }
 
     /**
-     * @param DataInterface|World $world
+     * @param DataInterface|EAV\World $world
      * @return Map
      */
     public function loadMap(DataInterface $world)
@@ -37,7 +37,7 @@ class WorldMapLoader
         $map = new Map($world);
         $qb = $this->dataRepository->getQbByWorld($this->coordinatedFamily, $world);
 
-        /** @var Coordinated $element */
+        /** @var EAV\Coordinated $element */
         foreach ($qb->getQuery()->getResult() as $element) {
             $cell = $map->getCell($element->getX(), $element->getY());
             if ($cell) {

@@ -1,5 +1,4 @@
 sidus_admin:
-    fallback_template: CleverAgeEAVManagerAdminBundle:Base
     configurations:
         map:
             controller: BlueBearWorldBrowserBundle:Map

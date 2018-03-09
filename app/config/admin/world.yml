@@ -1,7 +1,7 @@
 sidus_admin:
     configurations:
         world:
-            controller: CleverAgeEAVManagerAdminBundle:Data
+            controller: '%eav.controller%'
             entity: '%sidus_data_class%'
             prefix: /world
             actions:

@@ -1,19 +1,18 @@
 sidus_eav_model:
     families:
-        Resource:
+        GameResource:
             attributeAsLabel: resourceCode
             attributeAsIdentifier: resourceCode
             attributes:
                 resourceCode:
-                    required: true
-                    unique: true
+                    type: string_identifier
 
-        ResourceQuantity:
+        GameResourceQuantity:
             attributeAsLabel: resource
             attributes:
                 resource:
-                    type: autocomplete_data
+                    type: autocomplete_data_selector
                     form_options:
-                        family: Resource
+                        family: GameResource
                 quantity:
                     type: decimal

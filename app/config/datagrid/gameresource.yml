@@ -1,10 +1,10 @@
 sidus_data_grid:
     configurations:
-        data:
+        gameresource:
             query_handler:
                 provider: sidus.eav
                 options:
-                    family: World
+                    family: GameResource
                 sortable:
                     - id
                     - createdAt
