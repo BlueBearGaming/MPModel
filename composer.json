@@ -34,6 +34,7 @@
         "twig/extensions": "1.5.*",
         "doctrine/doctrine-migrations-bundle": "^1.2",
         "smalot/bootstrap-datetimepicker": "^2.4",
+        "a1essandro/perlin-noise": "~1.1",
 
         "cleverage/eav-manager": "dev-v1.3-dev",
         "sidus/eav-model-bundle": "dev-v1.2.x-dev",
@@ -43,7 +44,7 @@
         "sidus/datagrid-bundle": "dev-v1.3-dev",
         "sidus/file-upload-bundle": "dev-v1.2.x-dev",
         "sidus/admin-bundle": "dev-v1.3-dev",
-        "cleverage/process-bundle": "dev-v1.1-dev"
+        "cleverage/process-bundle": "dev-v1.1-dev as dev-master"
     },
     "require-dev": {
         "nelmio/alice": "^3.0@beta",

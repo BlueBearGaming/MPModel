@@ -25,10 +25,17 @@
             <a href="{{ admin_path('map', 'worldMap', {id: map.world.id}) }}" class="btn btn-default">
                 Back
             </a>
-            {{ dump(cell) }}
             <a href="{{ admin_path('map', 'build', {id: map.world.id, x: cell.x, y: cell.y}) }}" class="btn btn-primary">
                 Create City
             </a>
+            <h4>Cell content</h4>
+            <ul>
+                {% for item in cell.contents %}
+                    <li>
+                        {{ item }}
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 {% endblock %}

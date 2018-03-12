@@ -23,6 +23,7 @@ class Cell
 
     /**
      * Cell constructor.
+     *
      * @param Map $map
      * @param int $x
      * @param int $y
@@ -97,54 +98,55 @@ class Cell
     {
         $height = $this->height;
         if ($height < 0) { // Ocean / lake
-            $l = 50 + $height / 2;
             $color = [
                 'H' => 240,
                 'S' => 62,
-                'L' => $l,
+                'L' => 50 + $height / 2,
             ];
         } elseif ($height < 10) { // Swamp / beach
-            $l = 70 + $height * 2;
             $color = [
                 'H' => 30,
                 'S' => 100,
-                'L' => $l,
+                'L' => 70 + $height * 2,
             ];
         } elseif ($height < 90) { // Forest
-            $l = 30 - $height / 4;
             $color = [
                 'H' => 100,
                 'S' => 100,
-                'L' => $l,
+                'L' => 30 - $height / 4,
             ];
-        } elseif ($height < 130) { // Mountains / grass
-            $s = 90 - $height * 1.5 + 90;
-            $l = 10 + $height - 90;
+        } elseif ($height < 120) { // Mountains / grass
             $color = [
                 'H' => 100,
-                'S' => $s,
-                'L' => $l,
+                'S' => 90 - $height * 1.5 + 90,
+                'L' => 10 + $height - 90,
             ];
-        } else { // Rocks/snow
-            $s = max(20 - $height + 130, 0);
-            $l = 30 + $height - 130;
+        } elseif ($height < 150) { // Rocks
             $color = [
                 'H' => 100,
-                'S' => $s,
-                'L' => $l,
+                'S' => max(20 - $height + 130, 0),
+                'L' => 30 + $height - 130,
+            ];
+        } else { // Snow
+            $color = [
+                'H' => 100,
+                'S' => 0,
+                'L' => 90,
             ];
         }
+
         return "hsl({$color['H']}, {$color['S']}%, {$color['L']}%)";
     }
 
     /**
      * @param Cell $cell
+     *
      * @return int
      */
     public function distance(Cell $cell)
     {
         return (abs($this->getY() - $cell->getY())
-            + abs($this->getY() + $this->getX() - $cell->getY() - $cell->getX())
-            + abs($this->getX() - $cell->getX())) / 2;
+                + abs($this->getY() + $this->getX() - $cell->getY() - $cell->getX())
+                + abs($this->getX() - $cell->getX())) / 2;
     }
 }

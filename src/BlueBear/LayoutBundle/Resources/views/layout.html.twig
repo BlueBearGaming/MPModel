@@ -18,18 +18,12 @@
     <a class="navbar-brand" href="{{ path('eavmanager_layout.dashboard') }}">BlueBear/Model</a>
 {% endblock %}
 
-{#{% block main_menu_application %}#}
-    {#<ul class="nav navbar-nav">#}
-        {#{% if is_granted('ROLE_DATA_MANAGER') %}#}
-            {# PUT YOUR ADMINS MENU HERE #}
-            {#{{ utilities.admin_menu_icon_link('globe', 'Worlds', 'world', 'list') }}#}
-            {#{{ utilities.admin_menu_icon_link('sitemap', 'Configuration', 'configuration', 'index') }}#}
-            {#{% if is_granted('ROLE_MEDIA_MANAGER') %}#}
-                {#{{ utilities.admin_menu_icon_link('image', 'Médias', 'media', 'index') }}#}
-            {#{% endif %}#}
-        {#{% endif %}#}
-        {#{% if is_granted('ROLE_USER_MANAGER') %}#}
-            {#{{ utilities.admin_menu_icon_link('users', 'Utilisateurs', 'user', 'list') }}#}
-        {#{% endif %}#}
-    {#</ul>#}
-{#{% endblock %}#}
+{% block families_menu %}
+    <hr>
+    <ul class="nav nav-pills nav-stacked">
+        {% if is_granted('ROLE_DATA_MANAGER') %}
+            {{ utilities.admin_menu_icon_link('globe', 'Worlds', 'world', 'list') }}
+        {% endif %}
+    </ul>
+    {{ parent() }}
+{% endblock %}

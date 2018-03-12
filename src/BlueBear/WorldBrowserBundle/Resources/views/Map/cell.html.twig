@@ -7,7 +7,7 @@
             {% if c.contents|length %}
                 <div class="hexacontent">
                     {% for content in c.contents %}
-                        <i class="fa fa-{{ content.icon }}"></i>
+                        <i class="fa fa-{{ content.icon }}" title="{{ content }}"></i>
                     {% endfor %}
                 </div>
             {% endif %}
