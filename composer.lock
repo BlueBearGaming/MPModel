@@ -102,12 +102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleverage/eav-manager.git",
-                "reference": "d5ee15720b3c14c960a6ccaa61d02acf4503ef51"
+                "reference": "3adc3327d02a40929688049e045808748005c5ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/d5ee15720b3c14c960a6ccaa61d02acf4503ef51",
-                "reference": "d5ee15720b3c14c960a6ccaa61d02acf4503ef51",
+                "url": "https://api.github.com/repos/cleverage/eav-manager/zipball/3adc3327d02a40929688049e045808748005c5ab",
+                "reference": "3adc3327d02a40929688049e045808748005c5ab",
                 "shasum": ""
             },
             "require": {
@@ -157,7 +157,7 @@
                 "manager",
                 "model"
             ],
-            "time": "2018-03-06T10:39:55+00:00"
+            "time": "2018-03-16T17:59:52+00:00"
         },
         {
             "name": "cleverage/process-bundle",
@@ -1565,7 +1565,7 @@
                     "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 },
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -3196,12 +3196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusAdminBundle.git",
-                "reference": "e0f9275d8c7cac7bef1e41936c2721e26371b6da"
+                "reference": "6605e309d7bf45c3975ff4739a73b371bd10b3a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/e0f9275d8c7cac7bef1e41936c2721e26371b6da",
-                "reference": "e0f9275d8c7cac7bef1e41936c2721e26371b6da",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusAdminBundle/zipball/6605e309d7bf45c3975ff4739a73b371bd10b3a1",
+                "reference": "6605e309d7bf45c3975ff4739a73b371bd10b3a1",
                 "shasum": ""
             },
             "require": {
@@ -3232,7 +3232,7 @@
                 "action",
                 "admin"
             ],
-            "time": "2018-01-24T16:49:27+00:00"
+            "time": "2018-03-15T15:51:30+00:00"
         },
         {
             "name": "sidus/database-maintenance-bundle",
@@ -3288,12 +3288,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusDataGridBundle.git",
-                "reference": "cffdf74dd1a90cb7569fd0fb89a439e20db311f3"
+                "reference": "f28d7f5d638a5bf8fef66b668bac932f77b745dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/cffdf74dd1a90cb7569fd0fb89a439e20db311f3",
-                "reference": "cffdf74dd1a90cb7569fd0fb89a439e20db311f3",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusDataGridBundle/zipball/f28d7f5d638a5bf8fef66b668bac932f77b745dc",
+                "reference": "f28d7f5d638a5bf8fef66b668bac932f77b745dc",
                 "shasum": ""
             },
             "require": {
@@ -3323,7 +3323,7 @@
                 "datagrid",
                 "sort"
             ],
-            "time": "2018-03-02T14:33:49+00:00"
+            "time": "2018-03-16T13:47:52+00:00"
         },
         {
             "name": "sidus/doctrine-debug-bundle",
@@ -3423,12 +3423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVFilterBundle.git",
-                "reference": "ad11d96ab37db9b7be7c829cada095ba7fd5f1c5"
+                "reference": "8dd0d53ddfdf9dc1e3791119296e7aa1678134bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/ad11d96ab37db9b7be7c829cada095ba7fd5f1c5",
-                "reference": "ad11d96ab37db9b7be7c829cada095ba7fd5f1c5",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVFilterBundle/zipball/8dd0d53ddfdf9dc1e3791119296e7aa1678134bb",
+                "reference": "8dd0d53ddfdf9dc1e3791119296e7aa1678134bb",
                 "shasum": ""
             },
             "require": {
@@ -3462,7 +3462,7 @@
                 "filter",
                 "sort"
             ],
-            "time": "2018-03-02T14:35:50+00:00"
+            "time": "2018-03-21T16:31:24+00:00"
         },
         {
             "name": "sidus/eav-model-bundle",
@@ -3470,12 +3470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusEAVModelBundle.git",
-                "reference": "974db7d89d691d5cebba077f5c3c9532196960c4"
+                "reference": "9258f2250f09cc46b571dc24990914804c05357b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/974db7d89d691d5cebba077f5c3c9532196960c4",
-                "reference": "974db7d89d691d5cebba077f5c3c9532196960c4",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusEAVModelBundle/zipball/9258f2250f09cc46b571dc24990914804c05357b",
+                "reference": "9258f2250f09cc46b571dc24990914804c05357b",
                 "shasum": ""
             },
             "require": {
@@ -3512,7 +3512,7 @@
                 "eav",
                 "model"
             ],
-            "time": "2018-03-02T14:36:28+00:00"
+            "time": "2018-03-22T17:53:56+00:00"
         },
         {
             "name": "sidus/file-upload-bundle",
@@ -3520,12 +3520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VincentChalnot/SidusFileUploadBundle.git",
-                "reference": "1ea1e6bee3bbb3c0cec085228e5a2c4df87270bc"
+                "reference": "8203c0800471aaf7e83756768012d8eaee424f91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/1ea1e6bee3bbb3c0cec085228e5a2c4df87270bc",
-                "reference": "1ea1e6bee3bbb3c0cec085228e5a2c4df87270bc",
+                "url": "https://api.github.com/repos/VincentChalnot/SidusFileUploadBundle/zipball/8203c0800471aaf7e83756768012d8eaee424f91",
+                "reference": "8203c0800471aaf7e83756768012d8eaee424f91",
                 "shasum": ""
             },
             "require": {
@@ -3561,7 +3561,7 @@
                 "upload",
                 "uploader"
             ],
-            "time": "2017-06-27T14:04:53+00:00"
+            "time": "2018-03-23T17:10:50+00:00"
         },
         {
             "name": "sidus/filter-bundle",
@@ -4570,16 +4570,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.6",
+            "version": "v2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "d2117ec118c1ff3d28ccddca8212d82787a4809f"
+                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d2117ec118c1ff3d28ccddca8212d82787a4809f",
-                "reference": "d2117ec118c1ff3d28ccddca8212d82787a4809f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/69aacd44dbbaa3199d5afb68605c996d577896fc",
+                "reference": "69aacd44dbbaa3199d5afb68605c996d577896fc",
                 "shasum": ""
             },
             "require": {
@@ -4588,8 +4588,8 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.3@dev"
+                "symfony/debug": "^2.7",
+                "symfony/phpunit-bridge": "^3.3"
             },
             "type": "library",
             "extra": {
@@ -4632,7 +4632,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2018-03-03T16:23:01+00:00"
+            "time": "2018-03-20T04:31:17+00:00"
         },
         {
             "name": "white-october/pagerfanta-bundle",
@@ -4932,16 +4932,16 @@
         },
         {
             "name": "nelmio/alice",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/alice.git",
-                "reference": "2744351a5252e7b10329b26af01a04088e63b1ad"
+                "reference": "34ee0035297903dea0bee6dbb9d88daac302f31f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/2744351a5252e7b10329b26af01a04088e63b1ad",
-                "reference": "2744351a5252e7b10329b26af01a04088e63b1ad",
+                "url": "https://api.github.com/repos/nelmio/alice/zipball/34ee0035297903dea0bee6dbb9d88daac302f31f",
+                "reference": "34ee0035297903dea0bee6dbb9d88daac302f31f",
                 "shasum": ""
             },
             "require": {
@@ -5007,7 +5007,7 @@
                 "faker",
                 "test"
             ],
-            "time": "2018-03-03T11:44:28+00:00"
+            "time": "2018-03-17T22:13:13+00:00"
         },
         {
             "name": "sensio/generator-bundle",
