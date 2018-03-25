@@ -2,7 +2,7 @@
 
 namespace BlueBear\WorldBrowserBundle\Game\Resource;
 
-use BlueBear\WorldBrowserBundle\Game\Map\CoordinatedInterface;
+use BlueBear\WorldBrowserBundle\Game\Map\CellInterface;
 
 /**
  * Defines the behavior of an in-game resource
@@ -17,11 +17,17 @@ interface ResourceInterface
     public function getCode(): string;
 
     /**
-     * Use Z to define resource found at a given depth
+     * Give the available quantity at a given round
      *
-     * @param CoordinatedInterface $position
+     * @param CellInterface $cell
      *
      * @return int
      */
-    public function getQuantity(CoordinatedInterface $position): int;
+    public function getAvailableQuantity(CellInterface $cell): int;
+
+    /**
+     * @param CellInterface $cell
+     * @param int           $quantity
+     */
+    public function extract(CellInterface $cell, int $quantity): void;
 }

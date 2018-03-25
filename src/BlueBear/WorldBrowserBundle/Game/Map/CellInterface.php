@@ -22,16 +22,9 @@ interface CellInterface extends CoordinatedInterface
     public function getElementsByType(string $type): array;
 
     /**
-     * Get the amount of moisture present on this cell for this turn
-     *
-     * @return int
+     * @param CoordinatedInterface $element
      */
-    public function getMoisture(): int;
-
-    /**
-     * @param int $moisture
-     */
-    public function setMoisture(int $moisture): void;
+    public function addElement(CoordinatedInterface $element): void;
 
     /**
      * @return BiomeInterface

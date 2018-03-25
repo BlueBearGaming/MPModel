@@ -28,4 +28,9 @@ interface CoordinatedInterface
      * @return int
      */
     public function getZ(): int;
+
+    /**
+     * @return string
+     */
+    public function getType(): string;
 }
