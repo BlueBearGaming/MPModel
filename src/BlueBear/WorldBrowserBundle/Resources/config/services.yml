@@ -10,3 +10,8 @@ services:
         arguments:
             - '@doctrine'
             - '@sidus_eav_model.family.registry'
+
+    bluebear.twig.extension:
+        class: BlueBear\WorldBrowserBundle\Twig\WorldExtension
+        tags:
+            - { name: twig.extension }

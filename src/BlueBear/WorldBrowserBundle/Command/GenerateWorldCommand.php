@@ -35,13 +35,4 @@ class GenerateWorldCommand extends ContainerAwareCommand
         }
         $em->flush();
     }
-
-    /**
-     * @param DataInterface $data
-     * @return array
-     */
-    protected function dump(DataInterface $data)
-    {
-        dump(json_decode($this->getContainer()->get('serializer')->serialize($data, 'json'), true));
-    }
 }
