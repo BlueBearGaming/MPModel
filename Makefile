@@ -20,7 +20,7 @@ stop: ## Stop and destroy docker images
 	cd docker && docker-compose down
 
 .PHONY: shell
-shell: ## Deploy to staging
+shell: start ## Start a shell
 	cd docker && docker-compose exec www zsh
 
 .PHONY: reset

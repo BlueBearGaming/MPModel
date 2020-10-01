@@ -40,7 +40,7 @@ class Map
                     break;
                 }
                 $height = round($rawHeight / 2 * 255 - 255);
-                $offset = $x % 2 ? 1 : 0;
+                $offset = ($x % 2) ? 1 : 0;
                 $axialY = (int) floor($y + ($x + $offset) / 2 - $x);
                 $cell = new Cell($this, $x, $axialY);
                 $cell->setHeight($height);
